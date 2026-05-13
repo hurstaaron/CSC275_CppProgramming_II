@@ -1,0 +1,94 @@
+# =============================================================
+# CSC275 — C++ Programming II
+# .gitignore for Visual Studio / C++ project
+# =============================================================
+
+# -------------------------------------------------------------
+# Personal — never commit
+# -------------------------------------------------------------
+_Meta/                      # Session notes, progress tracking, personal files
+
+# -------------------------------------------------------------
+# Visual Studio — local IDE state (machine-specific, not for repo)
+# -------------------------------------------------------------
+.vs/                        # VS local settings folder — different on every machine
+*.user                      # Per-user project settings
+*.suo                       # Solution user options
+*.userosscache              # User OS cache
+*.sln.docstates             # Document state (open tabs, scroll positions)
+
+# -------------------------------------------------------------
+# Visual Studio — build output
+# -------------------------------------------------------------
+[Dd]ebug/                   # Debug build output
+[Rr]elease/                 # Release build output
+x64/                        # 64-bit build artifacts
+x86/                        # 32-bit build artifacts
+[Aa][Rr][Mm]/               # ARM build artifacts
+[Aa][Rr][Mm]64/             # ARM64 build artifacts
+[Bb]in/                     # Binary output folder
+[Oo]bj/                     # Object file staging folder
+[Ll]og/                     # Build logs
+[Ll]ogs/                    # Build logs (alternate name)
+bld/                        # Build staging folder
+
+# -------------------------------------------------------------
+# Compiled object and intermediate files
+# -------------------------------------------------------------
+*.obj                       # Compiled object files
+*.o                         # GCC/Clang object files (if cross-compiling)
+*.pch                       # Precompiled header (compiled)
+*.gch                       # GCC precompiled header
+
+# -------------------------------------------------------------
+# Linker output (generated — not hand-authored)
+# -------------------------------------------------------------
+*.ilk                       # Incremental linker state
+*.map                       # Linker map file
+*.exp                       # Export file (generated alongside .lib)
+*.lib                       # Import library (generated, not static libs you write)
+*.dll                       # Dynamic link library output
+*.exe                       # Executable output
+
+# -------------------------------------------------------------
+# Debug symbols
+# -------------------------------------------------------------
+*.pdb                       # Program database — debug symbols
+
+# -------------------------------------------------------------
+# IntelliSense and browsing database
+# -------------------------------------------------------------
+*.VC.db                     # IntelliSense database
+*.VC.opendb                 # IntelliSense database (open)
+ipch/                       # IntelliSense precompiled headers
+*.ncb                       # No compile browse (older VS)
+*.sdf                       # SQL Compact DB (older VS IntelliSense)
+*.opensdf                   # Open SQL Compact DB
+
+# -------------------------------------------------------------
+# NuGet packages
+# -------------------------------------------------------------
+packages/                   # Downloaded NuGet packages — restore on build
+*.nupkg                     # Package files
+
+# -------------------------------------------------------------
+# CMake (if used alongside Visual Studio)
+# -------------------------------------------------------------
+CMakeSettings.json          # VS CMake settings (machine-specific)
+CMakeCache.txt              # CMake cache
+cmake-build-*/              # CLion/CMake build directories
+out/                        # VS CMake output folder
+
+# -------------------------------------------------------------
+# VS Code (present in repo but not the active IDE)
+# -------------------------------------------------------------
+.vscode/                    # VS Code workspace settings — not needed for VS
+
+# -------------------------------------------------------------
+# Windows OS artifacts
+# -------------------------------------------------------------
+Thumbs.db                   # Windows thumbnail cache
+ehthumbs.db                 # Windows thumbnail cache (alternate)
+Desktop.ini                 # Folder display settings
+$RECYCLE.BIN/               # Recycle bin artifacts
+*.lnk                       # Windows shortcut files
