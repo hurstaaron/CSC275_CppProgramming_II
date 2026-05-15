@@ -1,6 +1,7 @@
 #include "ninja.h"
 #include <iostream>
 
+// Build the constructor for the Ninja class - a derived class of the Character (base) class
 Ninja::Ninja (
     // List of parameters inherited from the Character (base) class
     std::string inName, int inHealth, int inAttackPowerMin, int inAttackPowerMax,
@@ -13,9 +14,15 @@ Ninja::Ninja (
     inDefenseMin, inDefenseMax, inEvasionChance, inUltimateBar, inUltimateBarMax, inUltimateReady,
     inUltMultiplierMin, inUltMultiplierMax)
     {
-        Ninja::PrecisionStrike();
-            std::cout << "Ninja used Precision Strike!" << std::endl;
         
     }
+
+    // Build the signature method for the Ninja class
+    void Ninja::PrecisionStrike() {
+        std::cout << Name << " used Precision Strike!" << std::endl;
+    }
+
+            
+
 
     
