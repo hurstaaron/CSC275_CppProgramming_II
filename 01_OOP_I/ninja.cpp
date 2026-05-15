@@ -13,5 +13,9 @@ Ninja::Ninja (
     inDefenseMin, inDefenseMax, inEvasionChance, inUltimateBar, inUltimateBarMax, inUltimateReady,
     inUltMultiplierMin, inUltMultiplierMax)
     {
+        Ninja::PrecisionStrike();
+            std::cout << "Ninja used Precision Strike!" << std::endl;
+        
+    }
 
-    };
+    
