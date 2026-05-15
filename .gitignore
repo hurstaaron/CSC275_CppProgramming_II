@@ -5,8 +5,9 @@
 
 # -------------------------------------------------------------
 # Personal — never commit
+# Session notes, progress tracking, personal files
 # -------------------------------------------------------------
-_Meta/                      # Session notes, progress tracking, personal files
+_Meta/                      
 
 # -------------------------------------------------------------
 # Visual Studio — local IDE state (machine-specific, not for repo)
