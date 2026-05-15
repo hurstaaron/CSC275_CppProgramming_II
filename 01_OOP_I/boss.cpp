@@ -25,5 +25,3 @@ Boss::Boss () : Character(
     void Boss::RendingClaws() {
         std::cout << Name << " hits with Rending Claws!\n";
     }
-
-    // Test
