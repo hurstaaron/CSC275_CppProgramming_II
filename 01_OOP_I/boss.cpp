@@ -1,23 +1,27 @@
 #include "boss.h"
 #include <iostream>
 
-// Build the constructor for the Ninja class - a derived class of the Character (base) class
-Boss::Boss (
-    // List of parameters inherited from the Character (base) class
-    std::string inName, int inHealth, int inAttackPowerMin, int inAttackPowerMax,
-    int inPrecisionMin, int inPrecisionMax, int inDefenseMin, int inDefenseMax, 
-    int inEvasionChance, int inUltimateBar, int inUltimateBarMax, bool inUltimateReady,
-    float inUltMultiplierMin, float inUltMultiplierMax
-    ) : Character
-    // List of values inherited from the Character (base) class  
-    (inName, inHealth, inAttackPowerMin, inAttackPowerMax, inPrecisionMin, inPrecisionMax, 
-    inDefenseMin, inDefenseMax, inEvasionChance, inUltimateBar, inUltimateBarMax, inUltimateReady,
-    inUltMultiplierMin, inUltMultiplierMax)
+// Build the constructor for the Boss
+// Chains directly to character and has no subclasses
+// Stats will be fixed
+Boss::Boss () : Character(
+    // Fixed Stats 
+    "Abaddon",      // inName                           - demon's name
+    175,            // inHealth                         - above avg health
+    65, 95,         // inAttackMin, inAttackMax         - hits hard
+    50, 75,         // inPrecisionMin, inPrecisionMax   - calculated strikes
+    30, 50,         // inDefenseMin, inDefenseMax       - tanks hits
+    5,              // inEvasionChance                  - barely dodges
+    0, 250,         // inUltimateBar, inUltimateMax     - fills slower
+    false,          // inUltimateReady                  - starts empty      
+    2.0f, 3.5f      // inUltimateMultiplierMin / Max    - lethal criticals
+    )
+    // Constructor body 
     {
         
     }
 
-    // Build the signature method for the Ninja class
-    void Boss::ThunderPunch() {
-        std::cout << Name << " uses Thunder Punch!" << std::endl;
+    // Build the signature method for the Boss class
+    void Boss::RendingClaws() {
+        std::cout << Name << " hits with Rending Claws!\n";
     }

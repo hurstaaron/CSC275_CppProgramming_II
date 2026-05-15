@@ -2,21 +2,13 @@
 #pragma once
 #include "character.h"
 
-// Build the ninja character class -  a derived class of the Character (base) class
+// Build the Boss character class -  a derived class of the Character (base) class
 class Boss : public Character {
     public:
         // Constructor
-        Boss (
-            // List of parameters inherited from the Character (base) class
-            std::string inName, int inHealth, int inAttackPowerMin, int inAttackPowerMax,
-            int inPrecisionMin, int inPrecisionMax, int inDefenseMin, int inDefenseMax, 
-            int inEvasionChance, int inUltimateBar, int inUltimateBarMax, bool inUltimateReady,
-            float inUltMultiplierMin, float inUltMultiplierMax
-        );
+        // No parameters because there is one boss and stats are fixed
+        Boss ();
 
-        // Create the signature method for the Ninja class
-        void ThunderPunch();
-        
-    private:
-        // Methods
+        // Abaddon's (Boss) signature attack
+        void RendingClaws();
 };
