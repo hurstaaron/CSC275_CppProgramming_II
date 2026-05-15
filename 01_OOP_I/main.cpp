@@ -24,25 +24,13 @@
    // Call the game intro function to introduce the game to the user
    gameIntro();
 
-   /* --- Create a NINJA object ---
+   /* --- Create a NINJA, PIRATE, and BOSS objects ---
       Use the constructor 
       Name this character Shadow
       Pass the 14 parameters - 1 string, 10 ints, 1 bool, 2 floats
       */
    Ninja Shadow{"Shadow", 100, 15, 25, 80, 95, 40, 50, 70, 0, 100, false, 1.5f, 2.0f};
-
-   /* --- Create a PIRATE object ---
-      Use the constructor 
-      Name this character Shadow
-      Pass the 14 parameters - 1 string, 10 ints, 1 bool, 2 floats
-      */
    Pirate OneEye{"One-Eye", 100, 80, 95, 15, 25, 55, 75, 20, 0, 100, false, 1.5f, 2.0f};
-
-   /* --- Create a BOSS object ---
-      Use the constructor 
-      Name this character Shadow
-      Pass the 14 parameters - 1 string, 10 ints, 1 bool, 2 floats
-   */
    Boss EvilNed{"Evil Ned", 135, 70, 90, 20, 25, 65, 75, 30, 10, 90, false, 1.75f, 2.25f};
 
    /* --- Call all of the objects ---
@@ -87,7 +75,7 @@
    std::cout << "\nPress [ENTER] to begin...\n";
    // clear the buffer and ignore any input before the enter key, 
    // then pause the game for the user to press enter before proceeding
-   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+   //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
    std::cin.get();
  }
 
