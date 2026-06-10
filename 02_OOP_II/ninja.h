@@ -16,6 +16,12 @@ class Ninja : public Character {
 
         // Create the signature method for the Ninja class
         void PrecisionStrike();
+
+        // Override attack, the Ninja will return 25 hit points
+        int attack() override;
+
+        // Override Help, provides Ninja game instructions
+        void Help() override;
         
     private:
         // Methods

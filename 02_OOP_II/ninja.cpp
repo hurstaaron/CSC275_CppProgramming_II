@@ -22,6 +22,16 @@ Ninja::Ninja (
         std::cout << Name << " used Precision Strike!" << std::endl;
     }
 
+    // Ninja attack override will return 25 hit points
+    int Ninja::attack() {
+        return 25;
+    }
+
+    // Provides Ninja instructions to the player
+    void Ninja::Help() {
+        std::cout << Name << " is a Ninja. Fast, precise, and deadly from the shadows." << std::endl;
+    }
+
             
 
 

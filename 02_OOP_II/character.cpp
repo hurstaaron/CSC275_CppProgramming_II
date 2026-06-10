@@ -26,3 +26,33 @@ Character::Character(
     {
 
     }
+
+// Returns the current Health value
+int Character::getHealth() {
+    return Health;
+}
+
+// Updates Health and if the new value is below zero it sets to zero and notifies player
+void Character::setHealth(int inHealth) {
+    if (inHealth < 0) {
+        Health = 0;
+        std::cout << Name << " has Expired..." << std::endl;
+    } else {
+        Health = inHealth;
+    }
+}
+
+// Outputs the character's name followed by their message
+void Character::Talk(std::string inName, std::string inStuffToSay) {
+    std::cout << inName << " says: " << inStuffToSay << std::endl;
+}
+
+// Base attack, the base attack will return 10 hit points
+int Character::attack() {
+    return 10;
+}
+
+// Provides Character instructions to the player
+void Character::Help() {
+    std::cout << "Characters have Health, Attack, Defense, and Evasion stats." << std::endl;
+}

@@ -21,3 +21,13 @@ Pirate::Pirate (
     void Pirate::DirtyBrawler() {
         std::cout << Name << " is fighting Mean and Dirty!" << std::endl;
     }
+
+    // Pirate attack override will return 25 hit points
+    int Pirate::attack() {
+        return 25;
+    }
+
+    // Provides Pirate instructions to the player
+    void Pirate::Help() {
+        std::cout << Name << " is a Pirate. Tough, dirty, and hits harder than anyone." << std::endl;
+    }

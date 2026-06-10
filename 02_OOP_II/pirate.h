@@ -14,7 +14,13 @@ class Pirate : public Character {
             float inUltMultiplierMin, float inUltMultiplierMax
         );
 
-        // Create the signature method for the Ninja class
+        // Override attack; the Pirate returns 25 hit points
+        int attack() override;
+
+        // Override Help provides Pirate game instructions
+        void Help() override;
+
+        // Create the signature method for the Pirate class
         void DirtyBrawler();
         
     private:
