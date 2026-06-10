@@ -4,7 +4,7 @@
     Start Date: 5/13/26
     End Date:   5/xx/26
     By Aaron Hurst
-    References after function declarations
+    References after main()
  */
 
 // Preprocessing Libraries
@@ -103,8 +103,5 @@ std::unique_ptr<Character> chooseFighter() {
     }
 }
 
-/* ====== REFERENCES ======
-cppreference.com. (n.d.). Placeholder type specifiers (since C++11). 
-            cppreference.com. Retrieved June 10, 2026, from https://en.cppreference.com/w/cpp/language/auto
-*/
+
 
