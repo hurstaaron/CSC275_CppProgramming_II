@@ -9,40 +9,35 @@
 
 // Preprocessing Libraries
 #include "character.h"
- #include "ninja.h"
- #include "pirate.h"
- #include "boss.h"
- #include <iostream>
- #include <string>
- #include <cmath>
+#include "ninja.h"
+#include "pirate.h"
+#include "boss.h"
+#include "maleNinja.h"
+#include "femaleNinja.h"
+#include "humanPirate.h"
+#include "undeadPirate.h"
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <memory> // for smart pointers
 
 // Fucntion Prototypes
 void gameIntro();
-std::unique_ptr<Character> chooseFighter(int choice);
+std::unique_ptr<Character> chooseFighter();
 
 // Main
 int main () {
   // Call the game intro function to introduce the game to the user
   gameIntro();
+  // adding 'auto' to force compiler to looke at the return type of chooseFighter() and assign it to the 'player' variable.
+  // this is faster thay typing out std::unique_ptr<Character> every time, and also makes it easier to change the return type
+  auto player = chooseFighter();
+  std::cout << "\nYou chose: " << player->Name << std::endl;
 
-  /* --- Create a NINJA, PIRATE, and BOSS objects ---
-      Use the constructor 
-      Name this character Shadow
-      Pass the 14 parameters - 1 string, 10 ints, 1 bool, 2 floats
-      */
-  Ninja Shadow{"Shadow", 100, 15, 25, 80, 95, 40, 50, 70, 0, 100, false, 1.5f, 2.0f};
-  Pirate OneEye{"One-Eye", 100, 80, 95, 15, 25, 55, 75, 20, 0, 100, false, 1.5f, 2.0f};
-  Boss Abaddon{"Abaddon", 250, 55, 90, 20, 25, 65, 75, 30, 10, 90, false, 1.75f, 2.25f};
+  std::cout << "\nPress [ENTER] to exit...\n";
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  std::cin.get();
 
-  /* --- Call all of the objects ---
-      -- Expecting: --             
-         Shadow used Precision Strike!
-         One-Eye is fighting Mean and Dirty!
-         Evil Ned uses Thunder Punch!
-   */ 
-  Shadow.PrecisionStrike();
-  OneEye.DirtyBrawler();
-  Abaddon.RendingClaws();
  }
 
 // Function Declarations
@@ -80,9 +75,32 @@ void gameIntro(){
    std::cin.get();
  }
 
-std::unique_ptr<Character> chooseFighter(int choice){
-  
+std::unique_ptr<Character> chooseFighter() {
+    // Display the fighter selection menu
+    std::cout << "\n==========================================\n";
+    std::cout << "         CHOOSE YOUR FIGHTER\n";
+    std::cout << "==========================================\n";
+    std::cout << "  1. Musashi        (Male Ninja)\n";
+    std::cout << "  2. Mochizuki      (Female Ninja)\n";
+    std::cout << "  3. Sestus Paks    (Human Pirate)\n";
+    std::cout << "  4. Benjin Bonejaw (Undead Pirate)\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "Enter your choice (1-4): ";
 
+    // Read the player's choice
+    int choice{0};
+    std::cin >> choice;
+
+    // Return the selected fighter as a unique_ptr to the base class
+    switch (choice) {
+        case 1: return std::make_unique<MaleNinja>();
+        case 2: return std::make_unique<FemaleNinja>();
+        case 3: return std::make_unique<HumanPirate>();
+        case 4: return std::make_unique<UndeadPirate>();
+        default:
+            std::cout << "Invalid choice. Defaulting to Musashi.\n";
+            return std::make_unique<MaleNinja>();
+    }
 }
 
 

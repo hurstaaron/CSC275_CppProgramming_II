@@ -6,10 +6,10 @@
 #pragma once // Using pragma instead of indef and define guards for simplicity
 #include "pirate.h"
 
-class UndeadPirate : public Pirate {
+class HumanPirate : public Pirate {
 public:
     // Create the constructor
-    UndeadPirate()
+    HumanPirate()
         // Pass parameters: 1 string, 10 ints, 1 bool, 2 floats
         : Pirate("Sestus Paks",  120, 35, 65, 20, 45, 30, 
                 55, 15, 0, 100, false, 1.5f, 2.0f) {}    
