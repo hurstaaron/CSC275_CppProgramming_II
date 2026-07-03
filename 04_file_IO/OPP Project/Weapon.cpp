@@ -1,7 +1,6 @@
-#include "Weapon.h"
-// this pulls in the Weapon class declaration so I know what I am defining below
+#include "Weapon.h" // inherits from the Weapon class 
 
-// This is the IMPLEMENTATION file for Weapon. This is where I actually write out
+// This is the IMPLEMENTATION file for Weapon. This is where I write out
 // what each function does. Notice every function name has "Weapon::" in front of
 // it, that just tells the compiler "this function belongs to the Weapon class,
 // the one described over in Weapon.h".

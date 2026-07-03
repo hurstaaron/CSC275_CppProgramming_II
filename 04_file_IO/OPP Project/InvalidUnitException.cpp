@@ -6,8 +6,8 @@ InvalidUnitException::InvalidUnitException(std::string msg) {
     message = msg;
 }
 
-// this hands back the error message as a plain C style string
+// sends error message as a string
 const char* InvalidUnitException::what() const noexcept {
-    // c_str() converts my std::string into the plain text format this function has to return
+    // c_str() converts std::string into the text format this function returns
     return message.c_str();
 }

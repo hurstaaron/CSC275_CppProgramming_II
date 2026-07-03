@@ -1,6 +1,5 @@
-#pragma once
-#include "Unit.h"
-// needed because Vehicle inherits from Unit
+#pragma once        // no indef guards needed now
+#include "Unit.h"   // needed because Vehicle inherits from Unit
 
 // Same idea as Infantry, Vehicle gets name, health, and weapon from Unit for free,
 // and just adds its own vehicleType on top of that.

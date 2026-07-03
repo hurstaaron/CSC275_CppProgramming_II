@@ -1,11 +1,7 @@
-#include "Unit.h"
-// pulls in the Unit class declaration
-#include "InvalidUnitException.h"
-// pulls in my custom exception so I can throw it in the constructor
-#include <iostream>
-// needed for cout so I can print things to the screen
-#include <sstream>
-// needed for stringstream so I can build the comma separated file line
+#include "Unit.h"                   // pulls in the Unit class declaration
+#include "InvalidUnitException.h"   // pulls in my custom exception so I can throw it in the constructor
+#include <iostream>                 // needed for cout so I can print things to the screen
+#include <sstream>                  // needed for stringstream so I can build the comma separated file line
 
 // this is the constructor, it runs every time a new Unit (or something that
 // inherits from Unit) gets created

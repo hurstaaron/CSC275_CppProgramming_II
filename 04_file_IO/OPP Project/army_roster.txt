@@ -1,0 +1,2 @@
+INFANTRY,Private Reyes,100,Rifle,10,4
+VEHICLE,Iron Fist,250,Main Cannon,25,Tank

@@ -1,9 +1,6 @@
 #include "Vehicle.h"
-// pulls in the Vehicle class declaration
 #include <iostream>
-// needed for cout
 #include <sstream>
-// needed for stringstream
 
 // constructor, calls the Unit constructor first, then stores the vehicle type
 Vehicle::Vehicle(std::string n, int hp, Weapon w, std::string type) : Unit(n, hp, w) {

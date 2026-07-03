@@ -1,8 +1,7 @@
 #pragma once
-#include <string>
-// needed so I can use std::string for the name attribute
+#include <string>       
 #include "Weapon.h"
-// needed because Unit actually holds a real Weapon object, not just a pointer to one
+
 
 // This holds everything that EVERY unit in the army has in common, a name, health,
 // and a weapon. I made name and health "protected" instead of "private" because
